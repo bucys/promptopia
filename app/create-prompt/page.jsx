@@ -16,12 +16,12 @@ const CreatePrompt = () => {
         tag: '',
     })
 
-    const createPrompt = async function (e) {
+    const createPrompt = async (e) => {
         e.preventDefault();
         setIsSubmitting(true)
 
         try { 
-            const respone = await fetch('/api/prompt/new', {
+            const response = await fetch('/api/prompt/new', {
             method: 'POST',
             body: JSON.stringify({
                 prompt: post.prompt,
